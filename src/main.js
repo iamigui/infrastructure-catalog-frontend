@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   .then(data => {
       // Handle the data received from the API
-      displayData(data); // For now, just log the data to the console
+      displayData(data, 'catalogFullContentResult'); // For now, just log the data to the console
   })
   .catch(error => {
     // Handle any errors that occur during the fetch
@@ -23,19 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 // Function to display data on the screen
-function displayData(data) {
-  // Create a container element to hold the data
-  const dataContainer = document.createElement('div');
-  dataContainer.setAttribute('id', 'data-container');
+function displayData(data, elementID) {
+  // Select the paragraph element where the data will be displayed
+  const dataContainer = document.getElementById(elementID);
 
   // Format the data as HTML content (you can modify this part according to your needs)
   dataContainer.innerHTML = `
       <h2>Data from the API</h2>
       <pre>${JSON.stringify(data, null, 2)}</pre>
   `;
-
-  // Append the container to the body of the document
-  document.body.appendChild(dataContainer);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -59,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(data => {
           console.log('Project Obtained:', data); // Handle the success response
-          displayData(data);
+          displayData(data, 'getProjectByIdResult');
       })
       .catch(error => {
           console.error('There was a problem with the fetch operation:', error);

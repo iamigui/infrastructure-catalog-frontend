@@ -12,6 +12,20 @@
   margin-bottom: 15px;
 }
 
+h2 {
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Pre element styling */
+pre {
+  background-color: #f4f4f4; /* Light gray background for contrast */
+  padding: 10px; /* Padding inside the pre element */
+  border: 1px solid #ddd; /* Border to separate it from other content */
+  border-radius: 4px; /* Rounded corners */
+  overflow: auto; /* Scrollable if the content is too large */
+  max-height: 300px; /* Limit the height */
+}
+
 label {
   display: block;
   margin-bottom: 5px;
@@ -19,8 +33,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
-input[type="password"],
+input[type="jsonInput"],
 select {
   width: 100%;
   padding: 8px;
