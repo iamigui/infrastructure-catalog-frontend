@@ -1,2 +1,5 @@
-# infrastructure-catalog-frontend
-Infrastructure Catalog Frontend
+# Infrastructure Catalog Frontend
+
+## Run the Server
+
+Run the server with the Live Sever Extension
