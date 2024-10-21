@@ -16,6 +16,7 @@
   <div class="form-container">
     <form id="getProjectById">
       <div class="form-group">
+        <h2>Get Project by ID</h2>
         This is the content of a selected project from the catalog
         <label for="projectId">Project ID:</label>
         <input type="projectId" id="projectId" name="projectId" required>
@@ -25,6 +26,21 @@
     </div>
     </form>
     <p id="getProjectByIdResult"></p> 
+  </div>
+
+  <div class="form-container">
+    <form id="getProjectByKey">
+      <div class="form-group">
+        <h2>Get Project by Key</h2>
+        This is the content of a selected project from the catalog
+        <label for="getProjectKey">Project Key:</label>
+        <input type="text" id="getProjectKey" name="getProjectKey" required>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Get Project">
+    </div>
+    </form>
+    <p id="getProjectByKeyResult"></p> 
   </div>
 
   <div class="form-container">
@@ -51,8 +67,13 @@
         </div>
 
         <div class="form-group">
+            <label for="projectKey">Project Key:</label>
+            <input type="text" id="projectKey" name="projectKey" required>
+        </div>
+
+        <div class="form-group">
           <label for="jsonInput">JSON Input:</label>
-          <textarea id="jsonInput" name="jsonInput" rows="6" placeholder='Enter JSON text here...'></textarea>
+          <textarea type="text" id="jsonInput" name="jsonInput" rows="6" placeholder='Enter JSON text here...'></textarea>
         </div>
 
         <div class="form-group">
